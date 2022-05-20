@@ -18,4 +18,4 @@ class CredentialsModel {
     }
 }
 
-module.exports = CredentialsModel;enecccbvuinfhihekjvddnlitjcchfhltrrfklnnhkbd
+module.exports = CredentialsModel;
