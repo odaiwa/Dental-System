@@ -26,7 +26,8 @@ server.use("/api/orders", orderController);
 */
 server.use("*", (req, res) => res.status(404).send("Route not found"));
 
-server.listen(3001, () => console.log("Listening..."));
 
+const port = process.env.PORT || 3001; //process.env.PORT === Some production port || 3001 === localhost port
+const listener = server.listen(port, () => console.log(`Listening to ${port}...`));
 
 

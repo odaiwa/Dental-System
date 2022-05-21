@@ -13,6 +13,8 @@ import { LoginComponent } from './components/auth-area/login/login.component';
 import { LogoutComponent } from './components/auth-area/logout/logout.component';
 import { RegisterComponent } from './components/auth-area/register/register.component';
 import { FormsModule } from '@angular/forms';
+import { DoctorCardComponent } from './components/doctor-area/doctor-card/doctor-card.component';
+import { DoctorListComponent } from './components/doctor-area/doctor-list/doctor-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FormsModule } from '@angular/forms';
     AuthMenuComponent,
     LoginComponent,
     LogoutComponent,
-    RegisterComponent
+    RegisterComponent,
+    DoctorCardComponent,
+    DoctorListComponent
   ],
   imports: [
     BrowserModule,
