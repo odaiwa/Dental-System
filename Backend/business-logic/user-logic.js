@@ -1,17 +1,18 @@
 const dal = require("../data-access-layer/dal");
 const cryptoHelper = require("../helpers/crypto-helper");
+const sqlCommands = require("../helpers/statics");
 
 //Get all users from DB
 async function getAllUsersAsync() {
-    const sql =`SELECT * FROM users`;
+    const sql =  sqlCommands.GET_ALL_USERS;
     const users = await dal.executeAsync(sql);
     return users;
 }
 
 //get user by his uuid
-async function getOneUserByUuidAsync(uuid) {
-    const sql = `SELECT * FROM users WHERE uuid = ?`;
-    const user = await dal.executeAsync(sql, [ uuid ]);
+async function getOneUserByUuidAsync(username) {
+    const sql = sqlCommands.GET_USER_BY_USERNAME;
+    const user = await dal.executeAsync(sql, [ username ]);
     if (user.length === 0) return null; 
     return user[0];
 }
@@ -29,9 +30,9 @@ async function updateFullUserAsync(user) {
 }
 
 //delete user from DB
-async function deleteUserAsync(uuid) {
-    const sql = `DELETE FROM users WHERE uuid = ?`;
-    await dal.executeAsync(sql,[ uuid ]);
+async function deleteUserAsync(username) {
+    const sql = sqlCommands.DELETE_USER_BY_USERNAME;
+    await dal.executeAsync(sql,[ username ]);
 }
 
 module.exports = {
