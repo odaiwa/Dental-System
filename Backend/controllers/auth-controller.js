@@ -1,9 +1,9 @@
 const express = require("express");
-const authLogic = require("../business-logic-layer/auth-logic");
+const authLogic = require("../business-logic/auth-logic");
 const errorHelper = require("../helpers/errors-helper");
 const cryptoHelper = require("../helpers/crypto-helper");
-const UserModel = require("../models/UserModel");
-const CredentialsModel = require("../models/CredentialsModel");
+const UserModel = require("../models/user");
+const CredentialsModel = require("../models/credentials");
 const router = express.Router();
 
 
@@ -28,7 +28,7 @@ router.post("/login", async (request, response) => {
         response.json(loggedInUser);
     }
     catch (err) {
-        response.status(500).send(errorHelper.getError(err));
+        response.status(500).send(err.message);
     }
 });
 
@@ -53,7 +53,7 @@ router.post("/register", async (request, response) => {
         response.status(201).json(addedUser);
     }
     catch (err) {
-        response.status(500).send(errorHelper.getError(err));
+        response.status(500).send(err.message);
     }
 });
 
