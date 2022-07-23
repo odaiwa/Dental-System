@@ -13,6 +13,7 @@ async function usernameAlreadyTakenAsync(username) {
     if (result.length > 0) return null;
 }
 
+
 //Register new user to system
 async function registerAsync(user) {
     user.password = cryptoHelper.hash(user.password);
