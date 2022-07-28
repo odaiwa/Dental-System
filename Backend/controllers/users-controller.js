@@ -32,6 +32,13 @@ router.get('/users/nurs', async(request, response)=>{
         response.status(500).send("error while getting data");
     }
 });
-
+router.get('/roles', async(request,response)=>{
+    try{
+        const roles = await userLogic.getRolesAsync();
+        return response.status(200).json(roles);
+    }catch(err){
+        return response.status(500).send(err);
+    }
+})
 module.exports = router;
 
