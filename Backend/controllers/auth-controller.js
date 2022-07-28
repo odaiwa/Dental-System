@@ -1,6 +1,5 @@
 const express = require("express");
 const authLogic = require("../business-logic/auth-logic");
-const errorHelper = require("../helpers/errors-helper");
 const cryptoHelper = require("../helpers/crypto-helper");
 const UserModel = require("../models/user");
 const CredentialsModel = require("../models/credentials");

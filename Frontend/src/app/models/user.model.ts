@@ -4,8 +4,8 @@ export class UserModel{
   public lastName:string;
   public email:string;
   public password:string;
-  // public address= new AddressModel();
-  public isAdmin:Number;
-  public role:String;
+  public username:Number;
+  public dateOfBirth:Date;
+  public role:string;
   public token: string;
 }

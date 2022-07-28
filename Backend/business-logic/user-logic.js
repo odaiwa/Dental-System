@@ -9,6 +9,12 @@ async function getAllUsersAsync() {
     return users;
 }
 
+async function getRolesAsync(){
+    const sql = 'SELECT * from role';
+    const roles = await dal.executeAsync(sql);
+    return roles;
+}
+
 //get user by his uuid
 async function getOneUserByUuidAsync(username) {
     const sql = sqlCommands.GET_USER_BY_USERNAME;
@@ -39,5 +45,6 @@ module.exports = {
     getAllUsersAsync,
     getOneUserByUuidAsync,
     deleteUserAsync,
-    updateFullUserAsync
+    updateFullUserAsync,
+    getRolesAsync
 };

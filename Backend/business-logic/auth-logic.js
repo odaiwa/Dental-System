@@ -1,10 +1,9 @@
 //Authentication-logic
 const dal = require("../data-access-layer/dal");
-const uuid = require("uuid");
-const cryptoHelper = require("../helpers/crypto-helper");
 const UserModel = require("../models/user");
 const jwtHelper = require("../helpers/jwt-helper");
 const sqlCommands = require("../helpers/statics");
+const cryptoHelper = require("../helpers/crypto-helper");
 
 //check if username already exists in DB
 async function usernameAlreadyTakenAsync(username) {
@@ -16,6 +15,7 @@ async function usernameAlreadyTakenAsync(username) {
 
 //Register new user to system
 async function registerAsync(user) {
+    console.log(user);
     user.password = cryptoHelper.hash(user.password);
     const sql = sqlCommands.INSERT_INTO_USERS;
     const values = [ user.username, user.password, user.firstName, user.lastName, user.email , user.dateOfBirth, user.role ];

@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 // const expressFileUpload = require("express-fileupload");
 const authController = require("./controllers/auth-controller");
+const userController = require("./controllers/user-controller");
 /*
 const productsController = require("./controllers-layer/products-controller");
 const itemsController = require("./controllers-layer/items-controller");
@@ -17,6 +18,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 server.use("/api/auth", authController);
+server.use("/api/users", userController);
 /*
 server.use("/api/products", productsController);
 server.use("/api/categories", CategoriesController);
