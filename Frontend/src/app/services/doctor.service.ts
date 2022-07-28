@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
     providedIn: 'root'
 })
 export class ProductsService {
-
+/*
     constructor(private http: HttpClient) { }
 
     public async getAllProductsAsync(): Promise<ProductModel[]> {
@@ -63,4 +63,5 @@ export class ProductsService {
         return updatedProduct;
 
     }
+    */
 }
