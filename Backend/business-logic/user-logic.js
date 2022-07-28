@@ -15,6 +15,24 @@ async function getRolesAsync(){
     return roles;
 }
 
+async function getAllDoctorsAsync() {
+    const sql =  sqlCommands.GET_DOCTORS;
+    const users = await dal.executeAsync(sql);
+    return users;
+}
+
+async function getAllPatientsAsync() {
+    const sql =  sqlCommands.GET_PATIENTS;
+    const users = await dal.executeAsync(sql);
+    return users;
+}
+
+async function getAllNursesAsync() {
+    const sql =  sqlCommands.GET_NURSES;
+    const users = await dal.executeAsync(sql);
+    return users;
+}
+
 //get user by his uuid
 async function getOneUserByUuidAsync(username) {
     const sql = sqlCommands.GET_USER_BY_USERNAME;
@@ -46,5 +64,8 @@ module.exports = {
     getOneUserByUuidAsync,
     deleteUserAsync,
     updateFullUserAsync,
-    getRolesAsync
+    getRolesAsync,
+    getAllDoctorsAsync,
+    getAllPatientsAsync,
+    getAllNursesAsync
 };

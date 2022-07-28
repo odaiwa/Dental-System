@@ -4,7 +4,9 @@ const express = require("express");
 const cors = require("cors");
 // const expressFileUpload = require("express-fileupload");
 const authController = require("./controllers/auth-controller");
-const userController = require("./controllers/user-controller");
+const userController = require("./controllers/users-controller");
+
+
 /*
 const productsController = require("./controllers-layer/products-controller");
 const itemsController = require("./controllers-layer/items-controller");
