@@ -25,17 +25,23 @@ MySQL
 
 Backend API
 -----------------------------------------------------------------------------------------
-A Node.js application listening on port 8080.
+A Node.js application listening on port 8080 (Databse).
 
-To run ther backend api server locally, open a new terminal window and run:
+To run the backend api server locally, open a new terminal window and run:
 
-cd api
-npm install # first time only
-npm run watch 
-See api/test.md for testing the api with curl.
+cd Backend
+npm i # first time only
+node app # to run the backend
 
 To exit, hit Ctrl-C
 
 Frontend
 -----------------------------------------------------------------------------------------
-Angular application, served by nodeJS listening on port 8000.
+Angular application, served by nodeJS listening on port 3001.
+
+to run the frontend locally, open a new terminal and run the following commands:
+
+cd Frondend
+npm i
+npm start
+and open http://localhost:4200/
