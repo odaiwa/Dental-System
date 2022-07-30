@@ -1,1 +1,5 @@
-<p>doctor-list works!</p>
+<div>
+  <div *ngFor="let d of doctors">
+    <app-doctor-card [doctor]="d"></app-doctor-card>
+  </div>
+</div>

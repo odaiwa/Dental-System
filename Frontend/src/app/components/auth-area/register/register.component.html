@@ -1,9 +1,7 @@
 <form (submit)="register()" #formInfo="ngForm">
   <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>רישום למערכת</h1>
     <hr>
-
     <label for="firstName"><b>שם פרטי</b></label>
     <input type="text" name="firstName" id="firstName" required [(ngModel)]="user.firstName" #firstName="ngModel">
 
@@ -15,15 +13,16 @@
     <input type="text" placeholder="Enter username" name="username" id="email" required [(ngModel)]="user.username"
       #username="ngModel">
 
-    <label for="dateOfBirth"><b>dateOfBirth</b></label>
+    <label for="dateOfBirth"><b>תאריך לידה</b></label>
     <input type="date" placeholder="Enter dateOfBirth" name="dateOfBirth" id="email" required
       [(ngModel)]="user.dateOfBirth" #dateOfBirth="ngModel">
-
-
+<br>
+    <label for="dateOfBirth"><b>תפקיד</b></label>
+    <br>
     <select name="roleId" [(ngModel)]="user.role" #role="ngModel" required>
       <option *ngFor="let c of roles" value={{c.ID}}>{{c.Value}}</option>
     </select>
-
+<br>
     <label for="email"><b>מייל</b></label>
     <input type="email" placeholder="Enter email" name="email" id="email" required [(ngModel)]="user.email"
       #email="ngModel">
