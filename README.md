@@ -13,10 +13,15 @@ others.
 ![alt text](https://github.com/odaiwa/Dental-System/blob/Ibrahwem-patch-1/Diagram.png)
 
 
+Things you need to run the project:
+-------------------------------------------
+1. node.js : https://nodejs.org/dist/v16.16.0/node-v16.16.0-x64.msi
+2. angular cli : npm install -g @angular/cli
+3. XAMPP (database server) : https://downloadsapachefriends.global.ssl.fastly.net/7.4.29/xampp-windows-x64-7.4.29-1-VC15-installer.exe?from_af=true
+
 Prerequisites:
 -----------------------------------------------------------------------------------------
-git
-node
+git clone : gh repo clone odaiwa/Dental-System
 
 Database:
 -----------------------------------------------------------------------------------------
