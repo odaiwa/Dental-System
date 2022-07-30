@@ -1,6 +1,7 @@
 export class DoctorModel{
-  imageUrl?:String;
-  firstName:String;
+  firstName:string;
   lastName:String;
-  role:String;
+  userId:String;
+  email:String;
+  value:string;
 }
