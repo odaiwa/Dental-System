@@ -10,7 +10,7 @@ others.
 
 
 
-
+![alt text](https://github.com/odaiwa/Dental-System/blob/Ibrahwem-patch-1/Diagram.png)
 
 
 Prerequisites:
