@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DoctorModel } from 'src/app/models/doctor.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-doctor-list',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctor-list.component.css']
 })
 export class DoctorListComponent implements OnInit {
+  public doctors: DoctorModel[];
+  constructor(private userService: UserService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  async ngOnInit() {
+    try {
+      this.doctors = await this.userService.getAllDoctorsAsync();
+    }
+    catch (err: any) {
+      console.log(err.message);
+    }
   }
 
 }

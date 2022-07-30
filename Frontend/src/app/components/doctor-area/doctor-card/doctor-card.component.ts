@@ -11,7 +11,7 @@ export class DoctorCardComponent implements OnInit {
   constructor() { }
 
   @Input()
-  public doctor:DoctorModel = {firstName:"odai", lastName:"wattad",role:"ph"};
+  public doctor:DoctorModel;
 
   ngOnInit(): void {
   }

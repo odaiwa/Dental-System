@@ -7,3 +7,14 @@ async function getDoctorPatientListAsync(){
     const users = await dal.executeAsync(sql);
     return users;
 }
+
+async function getAllAsync(){
+    const sql = sqlCommands.GET_ALL_APPOINTMENTS;
+    const apps = await dal.executeAsync(sql);
+    return apps;
+}
+
+module.exports={
+    getAllAsync,
+    getDoctorPatientListAsync
+}

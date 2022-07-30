@@ -14,5 +14,7 @@ module.exports = {
     GET_PATIENTS : "SELECT * FROM get_all_patients;",
     GET_NURSES : "SELECT * FROM GET_All_NURSES;",
     //
-    GET_PATIENTS_DOCTORS:"SELECT * FROM GET_PATIENT_DOCTOR"
+    GET_PATIENTS_DOCTORS:"SELECT * FROM GET_PATIENT_DOCTOR",
+    GET_ALL_APPOINTMENTS : "SELECT * FROM get_all_apointments"
+
 } 
