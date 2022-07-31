@@ -1,0 +1,9 @@
+<form (submit)="addRoom()" #formInfo="ngForm">
+    <div class="container">
+      <h1>הוספת חדר</h1>
+      <hr>
+      <label for="roomName"><b>שם חדר</b></label>
+      <input type="text" name="roomName" id="firstName" required [(ngModel)]="room.roomName" #firstName="ngModel">
+      <button> Add Room </button>
+    </div>
+</form>

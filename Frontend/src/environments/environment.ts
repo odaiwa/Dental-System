@@ -5,4 +5,5 @@ export const environment = {
   registerUrl: baseUrl + "auth/register",
   loginUrl: baseUrl + "auth/login",
   usersUrl: baseUrl + "users",
+  roomsUrl: baseUrl + 'rooms'
 };

@@ -14,6 +14,8 @@ import { RegisterComponent } from './components/auth-area/register/register.comp
 import { FormsModule } from '@angular/forms';
 import { DoctorCardComponent } from './components/doctor-area/doctor-card/doctor-card.component';
 import { DoctorListComponent } from './components/doctor-area/doctor-list/doctor-list.component';
+import { AddRoomComponent } from './components/room-area/add-room/add-room.component';
+import { RoomsListComponent } from './components/room-area/rooms-list/rooms-list.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { DoctorListComponent } from './components/doctor-area/doctor-list/doctor
     RegisterComponent,
     DoctorCardComponent,
     DoctorListComponent,
+    AddRoomComponent,
+    RoomsListComponent,
   ],
   imports: [
   BrowserModule,
